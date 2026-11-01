@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Website Blocked</title>
+
+<!-- Jason favicon -->
+<link rel="icon" type="image/png" href="jason.png">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111111;
+    color:white;
+    font-family:Segoe UI, Arial, sans-serif;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+    padding:40px;
+}
+
+.icon{
+    font-size:90px;
+    margin-bottom:20px;
+}
+
+h1{
+    margin:0;
+    font-size:42px;
+    color:#FF4040;
+}
+
+.message{
+    margin-top:25px;
+    color:#D0D0D0;
+    line-height:1.7;
+    font-size:18px;
+}
+
+.close-btn{
+    margin-top:40px;
+    padding:15px 35px;
+    border:none;
+    border-radius:12px;
+    background:#008000;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.close-btn:hover{
+    background:#00A000;
+}
+
+.footer{
+    margin-top:30px;
+    color:#808080;
+    font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="icon">🚫</div>
+
+    <h1>Website Blocked</h1>
+
+    <div class="message">
+        This website has been blocked according to your filtering rules.
+        <br><br>
+        If you understand why this page is blocked, click the button below
+        to close this page manually.
+    </div>
+
+    <button class="close-btn" onclick="closePage()">
+        ✓ I Understand - Close Page
+    </button>
+
+    <div class="footer">
+        Jason's Website Filter
+    </div>
+
+</div>
+
+<script>
+function closePage() {
+    window.close();
+
+    setTimeout(function () {
+        if (!window.closed) {
+            history.back();
+        }
+    }, 200);
+}
+</script>
+
+</body>
+</html>
